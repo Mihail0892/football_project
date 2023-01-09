@@ -6,8 +6,9 @@ import { useSelector } from "react-redux";
 const FootballList = () => {
   const data = useSelector((state) => state.LikesAmount);
   const searchData = useSelector((state) => state.Search);
-  console.log(data);
-  
+  // console.log(data);
+  // const actualData = JSON.parse(localStorage.getItem("data"));
+
   return (
     <div className={styles.list}>
       {

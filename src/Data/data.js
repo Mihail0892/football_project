@@ -12,7 +12,7 @@ const Data = [
     club: "Real Madrid",
     country: "Portugal",
     position: "",
-    likes: 3,
+    likes: 0,
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const Data = [
     club: "PSG",
     country: "Argentina",
     position: "",
-    likes: 4,
+    likes: 0,
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const Data = [
     club: "Milan",
     country: "Sweden",
     position: "",
-    likes: 2,
+    likes: 0,
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const Data = [
     club: "PSG",
     country: "Brasil",
     position: "",
-    likes: 1,
+    likes: 0,
   },
 ];
 

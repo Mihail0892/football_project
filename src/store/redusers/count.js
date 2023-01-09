@@ -12,25 +12,9 @@ const LikesAmount = createSlice({
         ++findCount.likes;
         localStorage.setItem("data", JSON.stringify(state));
       }
-
-      // return state.map((item) => {
-      //   if (item.id === action.payload) {
-      //     return { ...item, likes: ++ item.likes };
-      //   }
-      //   localStorage.setItem("allLikes", JSON.stringify(state));
-
-      //   return item;
-      // });
     },
 
     dec: (state, action) => {
-      // return state.map((item) => {
-      //   if (item.id === action.payload) {
-      //     return { ...item, likes: item.likes - 1 };
-      //   }
-      //   localStorage.setItem("allLikes", JSON.stringify(state));
-      //   return item;
-      // });
       const findCount = state.find((item) => item.id === action.payload);
       if (findCount) {
         --findCount.likes;
@@ -42,19 +26,8 @@ const LikesAmount = createSlice({
       const sortedData = state.sort((a, b) =>
         a.likes > b.likes ? -1 : a.likes < b.likes ? 1 : 0
       );
+      localStorage.setItem("data", JSON.stringify(state));
       return sortedData;
-    },
-
-    search: (state, action) => {
-      const findPlayer = myData
-        ? myData.filter((item) =>
-            item.name.toLowerCase().includes(action.payload.toLowerCase())
-          )
-        : Data.filter((item) =>
-            item.name.toLowerCase().includes(action.payload.toLowerCase())
-          );
-
-      return findPlayer;
     },
   },
 });

@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { inc, dec } from "../../store/redusers/count";
+import { incSearch,decSearch } from "../../store/redusers/search";
 import styles from "./FootballCard.module.scss";
 
 import like from '../../assets/like.png';
@@ -16,7 +17,16 @@ const FootballCard = ({
   likes,
 }) => {
   const dispatch = useDispatch();
+
+  const handleIncClick = ()=>{
+    dispatch(inc(idfoot));
+    dispatch(incSearch(idfoot));
+  };
   
+  const handleDecClick = ()=>{
+    dispatch(dec(idfoot));
+    dispatch(decSearch(idfoot));
+  }
   return (
     <>
       <div className={styles.box}>
@@ -28,9 +38,9 @@ const FootballCard = ({
         <div className={styles.country}>{country}</div>
         <div className={styles.position}>{position}</div>
         <div className={styles.likes}>
-          <img src={dislike} alt='dislike' onClick={() => dispatch(dec(idfoot))}></img>
+          <img src={dislike} alt='dislike' onClick={handleDecClick}></img>
           {likes}
-          <img src={like} alt="like" onClick={() => dispatch(inc(idfoot))}></img>
+          <img src={like} alt="like" onClick={handleIncClick}></img>
         </div>
       </div>
     </>

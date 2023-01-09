@@ -9,7 +9,7 @@ const Search = () => {
 
   const handleChange = (e) => {
     setValue(e.target.value);
-    dispatch(search(e.target.value));
+   dispatch(search(e.target.value));
   };
 
   // const handleSubmit = (e) => {
