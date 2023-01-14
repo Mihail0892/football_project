@@ -4,18 +4,13 @@ const myData = JSON.parse(localStorage.getItem("data"));
 
 const Search = createSlice({
   name: "search",
-  initialState: myData,
+  initialState: myData ? myData : Data,
   reducers: {
     search: (state, action) => {
-      const findPlayer = myData
-        ? myData.filter((item) =>
-            item.name.toLowerCase().includes(action.payload.toLowerCase())
-          )
-        : Data.filter((item) =>
-            item.name.toLowerCase().includes(action.payload.toLowerCase())
-          );
-
-      return findPlayer;
+      const filteredData = state.filter((item) =>
+        item.name.toLowerCase().includes(action.payload.toLowerCase())
+      );
+      return filteredData;
     },
     incSearch: (state, action) => {
       const findCount = state.find((item) => item.id === action.payload);

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import {search} from "../../store/redusers/search";
+import {Link} from "react-router-dom";
 
 const Search = () => {
   const [value, setValue] = useState("");
@@ -21,7 +22,7 @@ const Search = () => {
   return (
     <div>
       {/* <form onSubmit={handleSubmit}> */}
-        <input value={value} onChange={handleChange} />
+        <Link to="/search"><input value={value} onChange={handleChange} /></Link>
       {/* </form> */}
     </div>
   );
