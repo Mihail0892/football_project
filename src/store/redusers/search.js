@@ -4,34 +4,37 @@ const myData = JSON.parse(localStorage.getItem("data"));
 
 const Search = createSlice({
   name: "search",
-  initialState: myData ? myData : Data,
+  initialState:{
+    players: myData ? myData : Data,
+    searchPlayers:[]
+  } ,
   reducers: {
     search: (state, action) => {
-      const filteredData = state.filter((item) =>
+      const filteredData = state.players.filter((item) =>
         item.name.toLowerCase().includes(action.payload.toLowerCase())
       );
       return filteredData;
     },
     incSearch: (state, action) => {
-      const findCount = state.find((item) => item.id === action.payload);
+      const findCount = state.players.find((item) => item.id === action.payload);
       if (findCount) {
         ++findCount.likes;
-        localStorage.setItem("data", JSON.stringify(state));
+        localStorage.setItem("data", JSON.stringify(state.players));
       }
     },
     decSearch: (state, action) => {
-      const findCount = state.find((item) => item.id === action.payload);
+      const findCount = state.players.find((item) => item.id === action.payload);
       if (findCount) {
         --findCount.likes;
-        localStorage.setItem("data", JSON.stringify(state));
+        localStorage.setItem("data", JSON.stringify(state.players));
       }
     },
     sortSearch: (state) => {
-      const sortedData = state.sort((a, b) =>
+      const sortedData = state.players.sort((a, b) =>
         a.likes > b.likes ? -1 : a.likes < b.likes ? 1 : 0
       );
-      localStorage.setItem("data", JSON.stringify(state));
-      return sortedData;
+      localStorage.setItem("data", JSON.stringify(state.players));
+      state.searchPlayers= sortedData;
     },
   },
 });

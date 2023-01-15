@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 import {sortSearch} from '../../store/redusers/search'
 
 const SearchList = () => {
-  const searchState = useSelector((state) => state.Search);
+  const searchState = useSelector((state) => state.Search.searchPlayers);
   const dispatch = useDispatch();
   
   useEffect(()=>{

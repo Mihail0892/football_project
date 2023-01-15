@@ -4,7 +4,7 @@ const myData = JSON.parse(localStorage.getItem("data"));
 
 const LikesAmount = createSlice({
   name: "amount",
-  initialState: myData ? myData : Data,
+  initialState:myData ? myData : Data,
   reducers: {
     inc: (state, action) => {
       const findCount = state.find((item) => item.id === action.payload);
@@ -29,8 +29,15 @@ const LikesAmount = createSlice({
       localStorage.setItem("data", JSON.stringify(state));
       return sortedData;
     },
+
+    search: (state, action) => {
+      const filteredData = state.players.filter((item) =>
+        item.name.toLowerCase().includes(action.payload.toLowerCase())
+      );
+      return filteredData;
+    },
   },
 });
 
 export default LikesAmount.reducer;
-export const { inc, dec, sort } = LikesAmount.actions;
+export const { inc, dec, sort,search } = LikesAmount.actions;

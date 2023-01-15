@@ -2,17 +2,17 @@ import React, { useEffect } from "react";
 import FootballCard from "../FootballCard/FootballCard";
 import styles from "./FootballList.module.scss";
 import { useSelector,useDispatch } from "react-redux";
-import { sort } from "../../store/redusers/count";
+// import { sort } from "../../store/redusers/count";
 import { sortSearch } from "../../store/redusers/search";
 
 const FootballList = () => {
-  const data = useSelector((state) => state.LikesAmount);
+  const data = useSelector((state) => state.Search.players);
   // const searchData = useSelector((state) => state.Search);
   // console.log(data);
   // const actualData = JSON.parse(localStorage.getItem("data"));
   const dispatch = useDispatch()
   useEffect(()=>{
-    dispatch(sort());
+    dispatch(sortSearch());
   },[dispatch,data]);
 
   // useEffect(()=>{
