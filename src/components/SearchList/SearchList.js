@@ -7,16 +7,17 @@ import {Link} from "react-router-dom";
 import {sortSearch} from '../../store/redusers/search'
 
 const SearchList = () => {
-  const searchState = useSelector((state) => state.Search.searchPlayers);
+  const searchPlayers = useSelector((state) => state.Search.searchPlayers);
+  const players = useSelector((state) => state.Search.players);
   const dispatch = useDispatch();
   
   useEffect(()=>{
     dispatch(sortSearch())
-  },[dispatch, searchState])
+  },[dispatch,players])
   return (
     <><Link to='/'><button>Повернутися до списку гравців</button></Link>
     <div className={styles.list}>
-      {searchState.map((item) => (
+      {searchPlayers.map((item) => (
         <FootballCard
           key={item.id}
           idfoot={item.id}

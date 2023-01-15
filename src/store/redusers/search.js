@@ -13,7 +13,7 @@ const Search = createSlice({
       const filteredData = state.players.filter((item) =>
         item.name.toLowerCase().includes(action.payload.toLowerCase())
       );
-      return filteredData;
+      state.searchPlayers= filteredData;
     },
     incSearch: (state, action) => {
       const findCount = state.players.find((item) => item.id === action.payload);

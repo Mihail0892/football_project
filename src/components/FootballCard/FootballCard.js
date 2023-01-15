@@ -19,12 +19,12 @@ const FootballCard = ({
   const dispatch = useDispatch();
 
   const handleIncClick = ()=>{
-    dispatch(inc(idfoot));
+    // dispatch(inc(idfoot));
     dispatch(incSearch(idfoot));
   };
   
   const handleDecClick = ()=>{
-    dispatch(dec(idfoot));
+    // dispatch(dec(idfoot));
     dispatch(decSearch(idfoot));
   }
   return (

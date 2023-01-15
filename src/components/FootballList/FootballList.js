@@ -6,14 +6,15 @@ import { useSelector,useDispatch } from "react-redux";
 import { sortSearch } from "../../store/redusers/search";
 
 const FootballList = () => {
-  const data = useSelector((state) => state.Search.players);
+  const players = useSelector((state) => state.Search.players);
+  
   // const searchData = useSelector((state) => state.Search);
   // console.log(data);
   // const actualData = JSON.parse(localStorage.getItem("data"));
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(sortSearch());
-  },[dispatch,data]);
+  },[dispatch,players]);
 
   // useEffect(()=>{
   //   dispatch(sortSearch());
@@ -35,7 +36,7 @@ const FootballList = () => {
       //         likes={item.likes}
       //       />
       //     )):
-         data.map((item) => (
+         players.map((item) => (
             <FootballCard
               key={item.id}
               idfoot={item.id}
