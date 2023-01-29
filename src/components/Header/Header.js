@@ -1,26 +1,38 @@
-// import React, { useEffect } from "react";
+import React from "react";
 import Search from "../Search/Search";
 import styles from "./Header.module.scss";
-import {Link} from "react-router-dom";
-
-// import { useDispatch, useSelector } from "react-redux";
-// import { sort } from "../../store/redusers/count";
-// import { sortSearch } from "../../store/redusers/search";
+import { Link, useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { showGolderBall, sortBall } from "../../store/redusers/search";
 
 const Header = () => {
-  // const dispatch = useDispatch();
-  // const sortData = useSelector((state) => state.LikesAmount);
-  // const searchData = useSelector((state) => state.Search);
-
-  
-  // useEffect(() => {
-  //   dispatch(sort());
-  // }, [dispatch, sortData]);
+  const location = useLocation();
+  const dispatch = useDispatch();
 
   return (
     <div className={styles.header}>
       <Search />
-      <Link to='/favorite'><button>Особистий кабінет</button></Link>
+      {location.pathname !== "/" && (
+        <Link to="/">
+          <button>Повернутися до списку гравців</button>
+        </Link>
+      )}
+      {location.pathname === "/" && (
+        <Link to="/goldenBall">
+          <button
+            onClick={() => {
+              dispatch(showGolderBall());
+              dispatch(sortBall());
+            }}
+          >
+            Володарі Золотого м'яча
+          </button>
+        </Link>
+      )}
+
+      <Link to="/favorite">
+        <button>Особистий кабінет</button>
+      </Link>
     </div>
   );
 };

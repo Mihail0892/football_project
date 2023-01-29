@@ -11,7 +11,8 @@ const Data = [
     img: Ronaldo,
     club: "Real Madrid",
     country: "Portugal",
-    position: "",
+    goldenBall: true,
+    quantityOfBalls:5,
     likes: 0,
   },
   {
@@ -20,7 +21,8 @@ const Data = [
     img: Messi,
     club: "PSG",
     country: "Argentina",
-    position: "",
+    goldenBall: true,
+    quantityOfBalls:7,
     likes: 0,
   },
   {
@@ -29,7 +31,8 @@ const Data = [
     img: Ibra,
     club: "Milan",
     country: "Sweden",
-    position: "",
+    goldenBall: true,
+    quantityOfBalls:6,
     likes: 0,
   },
   {
@@ -38,7 +41,8 @@ const Data = [
     img: Neymar,
     club: "PSG",
     country: "Brasil",
-    position: "",
+    goldenBall: false,
+    quantityOfBalls:0,
     likes: 0,
   },
 ];

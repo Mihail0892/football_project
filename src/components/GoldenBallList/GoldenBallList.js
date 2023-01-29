@@ -1,24 +1,23 @@
 import React, { useEffect } from "react";
-import styles from "./SearchList.module.scss";
+import styles from "./GoldenBallList.module.scss";
 import FootballCard from "../FootballCard/FootballCard";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { sortSearch } from "../../store/redusers/search";
+import { sortSearch} from "../../store/redusers/search";
 
-const SearchList = () => {
-  const searchPlayers = useSelector((state) => state.Search.searchPlayers);
+const GoldenBallList = () => {
+  const goldenPlayers = useSelector((state) => state.Search.goldenBall);
   const players = useSelector((state) => state.Search.players);
   const dispatch = useDispatch();
-  // console.log(searchPlayers.length);
+  console.log(goldenPlayers);
 
   useEffect(() => {
     dispatch(sortSearch());
   }, [dispatch, players]);
-  if(searchPlayers.length===0) return "Гравця не знайдено"
-  else return (
+ return (
     <>
       <div className={styles.list}>
-        {searchPlayers.map((item) => (
+        {goldenPlayers.map((item) => (
           <FootballCard
             key={item.id}
             idfoot={item.id}
@@ -36,4 +35,4 @@ const SearchList = () => {
   );
 };
 
-export default SearchList;
+export default GoldenBallList;

@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { search } from "../../store/redusers/search";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Search = () => {
   const [value, setValue] = useState("");
 
   const players = useSelector((state) => state.Search.players);
 
+  const location = useLocation();
+
   useEffect(() => {
+    if (location.pathname !== "/search") {
+      setValue("");
+    }
     setValue("");
-  }, [players]);
+  }, [players, location]);
 
   const dispatch = useDispatch();
 
@@ -19,19 +24,11 @@ const Search = () => {
     dispatch(search(e.target.value));
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  // dispatch(search(e.target.value));
-  // setValue('');
-  // };
-
   return (
     <div>
-      {/* <form onSubmit={handleSubmit}> */}
       <Link to="/search">
         <input value={value} onChange={handleChange} />
       </Link>
-      {/* </form> */}
     </div>
   );
 };

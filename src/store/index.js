@@ -1,14 +1,11 @@
-import {configureStore} from '@reduxjs/toolkit';
+import { configureStore } from "@reduxjs/toolkit";
 
-import LikesAmount from './redusers/count';
-import Search from './redusers/search';
-
+import Search from "./redusers/search";
 
 const store = configureStore({
-    reducer:{
-        LikesAmount:LikesAmount,
-        Search:Search,
-    }
+  reducer: {
+    Search: Search,
+  },
 });
 
 export default store;
