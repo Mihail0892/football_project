@@ -10,7 +10,6 @@ const Search = createSlice({
     players: myData ? myData : Data,
     searchPlayers: [],
     favourite: favouritePlayers ? favouritePlayers : [],
-    showClub: false,
     goldenBall:goldenBallPlayers?goldenBallPlayers: [],
   },
   reducers: {
@@ -61,12 +60,6 @@ const Search = createSlice({
         (item) => item.idfoot !== action.payload
       );
       localStorage.setItem("favourite", JSON.stringify(state.favourite));
-    },
-
-    showClub: (state, action) => {
-      // Внести изменения в условие
-      if (action.payload) state.showClub = !state.showClub;
-      
     },
 
     showGolderBall: (state) => {

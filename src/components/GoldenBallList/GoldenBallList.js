@@ -9,7 +9,6 @@ const GoldenBallList = () => {
   const goldenPlayers = useSelector((state) => state.Search.goldenBall);
   const players = useSelector((state) => state.Search.players);
   const dispatch = useDispatch();
-  console.log(goldenPlayers);
 
   useEffect(() => {
     dispatch(sortSearch());

@@ -1,12 +1,11 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import {
   incSearch,
   decSearch,
   addToFavourite,
   removeFromFavourite,
-  showClub,
 } from "../../store/redusers/search";
 import styles from "./FootballCard.module.scss";
 
@@ -23,20 +22,14 @@ const FootballCard = ({
   likes,
   balls,
 }) => {
+  const[showLable,setShowLable]=useState(false);
   const dispatch = useDispatch();
   const location = useLocation();
 
-  const showClubState = useSelector((state) => state.Search.showClub);
+  
 
   const handleIncClick = () => {
     dispatch(incSearch(idfoot));
-  };
-
-  const handleDecClick = () => {
-    dispatch(decSearch(idfoot));
-  };
-
-  const handleImageClick = () => {
     const item = {
       name,
       img,
@@ -50,29 +43,36 @@ const FootballCard = ({
     dispatch(addToFavourite(item));
   };
 
+  const handleDecClick = () => {
+    dispatch(decSearch(idfoot));
+  };
+
+
   return (
     <>
       <div
         // onMouseEnter={() => dispatch(showClub(idfoot))}
         // onMouseLeave={() => dispatch(showClub(idfoot))}
+        onMouseEnter={() => setShowLable(true)}
+        onMouseLeave={() => setShowLable(false)}
         className={styles.box}
       >
         {location.pathname === "/favorite" && (
           <div onClick={() => dispatch(removeFromFavourite(idfoot))}>X</div>
         )}
         <div className={styles.photo}>
-          <img onClick={handleImageClick} src={img} alt="player"></img>
+          <img  src={img} alt="player"></img>
         </div>
         <div className={styles.name}>{name}</div>
         <div className={styles.club}>{club}</div>
         <div className={styles.country}>{country}</div>
         <div className={styles.position}>{goldenBall}</div>
         
-          <img className={styles.lable} src={img} alt="img"></img>
+          {showLable && <img className={styles.lable} src={img} alt="img"></img>}
         
         <div className={styles.likes}>
           {location.pathname !== "/favorite" &&
-            location.pathname !== "/goldenBall" && (
+            location.pathname !== "/goldenBall" &&  (
               <>
                 <img src={dislike} alt="dislike" onClick={handleDecClick}></img>
                 {likes}

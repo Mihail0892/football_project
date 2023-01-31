@@ -5,9 +5,7 @@
     border: 3px solid black;
     border-radius: 10px;
     background-color:rgb(250, 222, 151);
-    &:hover {
-        
-      }
+   
 }
 
 .photo{
@@ -45,10 +43,6 @@
 }
 
 .lable{
-    display: none;
     width: 70px;
     height: 90px;
-    &:hover {
-        display: block;
-      }
 }
