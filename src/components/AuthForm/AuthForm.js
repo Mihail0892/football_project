@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./AuthForm.module.scss";
-import { useDispatch} from "react-redux";
-import {logIn,changeNickname} from "../../store/redusers/auth";
+import { useDispatch } from "react-redux";
+import { logIn, changeNickname } from "../../store/redusers/auth";
 
 const AuthForm = ({ setModal }) => {
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [pass, setPass] = useState("");
   const divEl = useRef();
@@ -31,7 +31,7 @@ const AuthForm = ({ setModal }) => {
     if (pass === "") {
       alert("Введіть пароль");
     }
-    if (pass.toLowerCase() !== "хуйло"&& pass.toLowerCase() !== "") {
+    if (pass.toLowerCase() !== "хуйло" && pass.toLowerCase() !== "") {
       alert("Пароль невірний");
       setPass("");
     }
@@ -55,10 +55,14 @@ const AuthForm = ({ setModal }) => {
           onChange={(e) => setPass(e.target.value)}
           placeholder="Хто путін?"
         />
-        <button onClick={()=>{
-          pass.toLowerCase() === "хуйло"&& dispatch(logIn());
-          pass.toLowerCase() === "хуйло"&&dispatch(changeNickname(name))
-      }} disabled={name === "" ? true : false} type="submit">
+        <button
+          onClick={() => {
+            pass.toLowerCase() === "хуйло" && dispatch(logIn());
+            pass.toLowerCase() === "хуйло" && dispatch(changeNickname(name));
+          }}
+          disabled={name === "" ? true : false}
+          type="submit"
+        >
           Вхід
         </button>
       </form>

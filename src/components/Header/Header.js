@@ -34,7 +34,7 @@ const Header = ({ setModal }) => {
       )}
 
       <Link to="/favorite">
-        {isLogIn && <button>Особистий кабінет</button>}
+        {isLogIn && location.pathname !== "/favorite"&&  <button>Особистий кабінет</button>}
       </Link>
       {!isLogIn ? (
         <button onClick={() => setModal(true)}>Вхід</button>

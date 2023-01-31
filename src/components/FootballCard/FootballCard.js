@@ -22,11 +22,9 @@ const FootballCard = ({
   likes,
   balls,
 }) => {
-  const[showLable,setShowLable]=useState(false);
+  const [showLable, setShowLable] = useState(false);
   const dispatch = useDispatch();
   const location = useLocation();
-
-  
 
   const handleIncClick = () => {
     dispatch(incSearch(idfoot));
@@ -47,7 +45,6 @@ const FootballCard = ({
     dispatch(decSearch(idfoot));
   };
 
-
   return (
     <>
       <div
@@ -61,18 +58,18 @@ const FootballCard = ({
           <div onClick={() => dispatch(removeFromFavourite(idfoot))}>X</div>
         )}
         <div className={styles.photo}>
-          <img  src={img} alt="player"></img>
+          <img src={img} alt="player"></img>
         </div>
         <div className={styles.name}>{name}</div>
         <div className={styles.club}>{club}</div>
         <div className={styles.country}>{country}</div>
         <div className={styles.position}>{goldenBall}</div>
-        
-          {showLable && <img className={styles.lable} src={img} alt="img"></img>}
-        
+
+        {showLable && <img className={styles.lable} src={img} alt="img"></img>}
+
         <div className={styles.likes}>
           {location.pathname !== "/favorite" &&
-            location.pathname !== "/goldenBall" &&  (
+            location.pathname !== "/goldenBall" && (
               <>
                 <img src={dislike} alt="dislike" onClick={handleDecClick}></img>
                 {likes}
