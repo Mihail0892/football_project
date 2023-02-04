@@ -9,8 +9,9 @@ import {
 } from "../../store/redusers/search";
 import styles from "./FootballCard.module.scss";
 
-import like from "../../assets/like.png";
-import dislike from "../../assets/dislike.png";
+import like from "../../assets/like.svg";
+import dislike from "../../assets/dislike.svg";
+import line from "../../assets/line.png";
 
 const FootballCard = ({
   name,
@@ -21,6 +22,8 @@ const FootballCard = ({
   idfoot,
   likes,
   balls,
+  imgClub,
+  imgCountry,
 }) => {
   const [showLable, setShowLable] = useState(false);
   const dispatch = useDispatch();
@@ -37,6 +40,8 @@ const FootballCard = ({
       idfoot,
       likes,
       balls,
+      imgClub,
+      imgCountry,
     };
     dispatch(addToFavourite(item));
   };
@@ -48,8 +53,6 @@ const FootballCard = ({
   return (
     <>
       <div
-        // onMouseEnter={() => dispatch(showClub(idfoot))}
-        // onMouseLeave={() => dispatch(showClub(idfoot))}
         onMouseEnter={() => setShowLable(true)}
         onMouseLeave={() => setShowLable(false)}
         className={styles.box}
@@ -61,20 +64,23 @@ const FootballCard = ({
           <img src={img} alt="player"></img>
         </div>
         <div className={styles.name}>{name}</div>
+        <img className={styles.line} src={line} alt="line"/>
         <div className={styles.club}>{club}</div>
         <div className={styles.country}>{country}</div>
         <div className={styles.position}>{goldenBall}</div>
 
-        {showLable && <img className={styles.lable} src={img} alt="img"></img>}
+        {showLable && (
+          <img className={styles.lable} src={imgClub} alt="img"></img>
+        )}
 
         <div className={styles.likes}>
           {location.pathname !== "/favorite" &&
             location.pathname !== "/goldenBall" && (
-              <>
-                <img src={dislike} alt="dislike" onClick={handleDecClick}></img>
+              <div>
+                <img src={dislike} alt="like" onClick={handleIncClick}></img>
                 {likes}
-                <img src={like} alt="like" onClick={handleIncClick}></img>
-              </>
+                <img src={like} alt="dislike" onClick={handleDecClick}></img>
+              </div>
             )}
           {location.pathname === "/goldenBall" && <>{balls}</>}
         </div>

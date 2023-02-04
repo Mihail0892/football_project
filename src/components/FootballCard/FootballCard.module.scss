@@ -1,48 +1,94 @@
-.box{
-    position: relative;
-    width: 250px;
-    height: 360px;
-    border: 3px solid black;
-    border-radius: 10px;
-    background-color:rgb(250, 222, 151);
-   
+.box {
+  position: relative;
+  width: 307px;
+  height: 437px;
+  background-image: url(../../assets/Card.png);
 }
 
-.photo{
-    position:absolute;
-    right: 5px;
-    top:10px;
-    width: 150px;
-    height: 200px;
-    img {
-        width: 100%;
-        height: 100%;
-    }
-    &:hover {
-        transform: scale(1.1);
-        transition: 0.5s;
-      }
+.photo {
+  position: absolute;
+  right: 10px;
+  top: 30px;
+//   width: 150px;
+//   height: 200px;
+  img {
+    width: 180px;
+    height: 220px;
+  }
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
 }
 
-.name{
-    position: absolute;
-    top:220px;
-    left:50px;
-    font-size: 21px;
+.name {
+    width: 300px;
+  position: absolute;
+  top: 276px;
+  font-family: 'Oswald';
+font-style: normal;
+font-weight: 500;
+font-size: 21px;
+line-height: 30px;
+text-align: center;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+
+color: #181818;
 }
 
-.likes{
-    position: absolute;
-    bottom: 20px;
-    left:40%;
-
+.likes {
+    width: 100px;
+    height: 27px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 353px;
+  left: 117px;
     img{
-        width: 30px;
-        height: 30px;
+        margin: 0 5px;
     }
 }
 
-.lable{
-    width: 70px;
-    height: 90px;
+.lable {
+  position: absolute;
+  top: 80px;
+  left:10px;
+  width: 70px;
+  height: 90px;
+}
+
+.club{
+    position: absolute;
+    top: 30px;
+    left: 55px;
+    font-family: 'Oswald';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+text-align: center;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+}
+
+.country{
+    position: absolute;
+    top: 50px;
+    left: 55px;
+    font-family: 'Oswald';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+text-align: center;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+}
+
+.line{
+    position: absolute;
+    top: 323px;
+    left: 30px;
+
 }

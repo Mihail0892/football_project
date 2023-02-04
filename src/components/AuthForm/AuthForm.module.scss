@@ -1,9 +1,74 @@
-.box{
-    width: 550px;
-    height: 400px;
-    background-color: antiquewhite;
-    position: absolute;
-    z-index: 1000;
-    top:20%;
-    left:40%;
+.box {
+  width: 519px;
+  height: 468px;
+  background-color: #FFFFFF;
+//   background-color: #e9f4d9;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+
+  input {
+    width: 318px;
+    height: 53px;
+    left: 0px;
+    top: 0px;
+    opacity: 0.8;
+    border: 1px solid #181818;
+    border-radius: 8px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 17px;
+    color: #181818;
+    padding-left: 5px;
+  }
+  @media screen and (max-width: 500px) {
+    width: 375px;
+  }
+}
+
+.enteredPlace {
+  width: 318px;
+  height: 176px;
+  margin: 20px 100px 0 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  button {
+    width: 322px;
+    height: 46px;
+
+    background: #eb9c00;
+    border-radius: 3px;
+  }
+}
+
+.modalText {
+  width: 366px;
+  height: 126px;
+
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #181818;
+
+  @media screen and (max-width: 500px) {
+    font-size: 24px;
+    line-height: 30px;
+  }
 }

@@ -29,6 +29,8 @@ const SearchList = () => {
             img={item.img}
             likes={item.likes}
             balls={item.quantityOfBalls}
+            imgClub={item.imgClub}
+          imgCountry={item.imgCountry}
           />
         ))}
       </div>

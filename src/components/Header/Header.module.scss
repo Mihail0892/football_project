@@ -1,9 +1,62 @@
-.header{
-    height: 60px;
-    background-color: rgb(180, 245, 126);
-    margin-bottom: 20px;
-    display: flex;
-    justify-content:space-between;
+.header {
+  width: 100vw;
+  max-width: 1440px;
+  height: 60px;
+  background-color: rgb(234, 248, 223);
+  // margin-bottom: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 10px;
+  position: fixed;
+  top: 0px;
+  z-index: 10000;
+  overflow-x: hidden;
+  a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+      color: goldenrod;
+    }
+  }
+
+  button {
+    width: 115px;
+    height: 51px;
     align-items: center;
-    padding: 0 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 500px) {
+      width: 80px;
+      height: 30px;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
+
+.user {
+  align-items: center;
+  width: 150px;
+  img {
+    margin-left: 5px;
+  }
+}
+
+.headerLeft {
+  width: 230px;
+  // margin-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

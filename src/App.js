@@ -7,13 +7,14 @@ import { useSelector } from "react-redux";
 import MyFavorite from "./components/MyFavorite/MyFavorite";
 import GoldenBallList from "./components/GoldenBallList/GoldenBallList";
 import AuthForm from "./components/AuthForm/AuthForm";
+import styles from "./App.module.scss";
 
 function App() {
   const [modal, setModal] = useState(false);
   const isLogIn = useSelector((state) => state.Auth.isLogedIn);
 
   return (
-    <>
+    <div className={styles.box}>
       <Header setModal={setModal} />
 
       {modal && <AuthForm setModal={setModal} />}
@@ -27,7 +28,7 @@ function App() {
           </Routes>
         </>
       )}
-    </>
+    </div>
   );
 }
 

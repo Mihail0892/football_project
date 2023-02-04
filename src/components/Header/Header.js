@@ -6,6 +6,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { showGolderBall, sortBall } from "../../store/redusers/search";
 import { logOut } from "../../store/redusers/auth";
 
+import user from "../../assets/user.svg";
+import upArrow from "../../assets/upArrow.svg";
+
 const Header = ({ setModal }) => {
   const isLogIn = useSelector((state) => state.Auth.isLogedIn);
   const nickname = useSelector((state) => state.Auth.nickname);
@@ -17,38 +20,47 @@ const Header = ({ setModal }) => {
       {isLogIn && <Search />}
       {location.pathname !== "/" && isLogIn && (
         <Link to="/">
-          <button>Повернутися до списку гравців</button>
+          <p>Повернутися до списку гравців</p>
         </Link>
       )}
       {location.pathname === "/" && isLogIn && (
         <Link to="/goldenBall">
-          <button
+          <p
             onClick={() => {
               dispatch(showGolderBall());
               dispatch(sortBall());
             }}
           >
             Володарі Золотого м'яча
-          </button>
+          </p>
         </Link>
       )}
 
       <Link to="/favorite">
-        {isLogIn && location.pathname !== "/favorite"&&  <button>Особистий кабінет</button>}
+        {isLogIn && location.pathname !== "/favorite" && (
+          <p>Особистий кабінет</p>
+        )}
       </Link>
-      {!isLogIn ? (
-        <button onClick={() => setModal(true)}>Вхід</button>
-      ) : (
-        <button
-          onClick={() => {
-            localStorage.removeItem("nickname");
-            dispatch(logOut());
-          }}
-        >
-          Вихід
-        </button>
-      )}
-      {nickname}
+      <div className={styles.headerLeft}>
+        <div className={styles.user}>
+          {nickname}
+          {nickname && <img src={user} alt="user logo" />}
+        </div>
+
+        {!isLogIn ? (
+          <button onClick={() => setModal(true)}>Вхід</button>
+        ) : (
+          <button
+            onClick={() => {
+              localStorage.removeItem("nickname");
+              dispatch(logOut());
+            }}
+          >
+            Вихід
+            <img src={upArrow} alt="arrow" />
+          </button>
+        )}
+      </div>
     </div>
   );
 };

@@ -39,21 +39,23 @@ const AuthForm = ({ setModal }) => {
 
   return (
     <div ref={divEl} className={styles.box}>
+      <div className={styles.modalText}>ДОЛУЧАЙСЯ ДО ГОЛОСУВАННЯ ЗА КРАЩОГО ФУТБОЛІСТА</div>
       <form onSubmit={handleSubmit}>
+      <div className={styles.enteredPlace}>
         <span onClick={() => setModal(false)}>X</span>
         <input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Ваше ім'я"
+          placeholder="Ваше ім'я*"
           minLength={3}
         />
-        <br />
+        
         <input
           type="text"
           value={pass}
           onChange={(e) => setPass(e.target.value)}
-          placeholder="Хто путін?"
+          placeholder="Хто путін?*"
         />
         <button
           onClick={() => {
@@ -65,6 +67,7 @@ const AuthForm = ({ setModal }) => {
         >
           Вхід
         </button>
+        </div>
       </form>
     </div>
   );
