@@ -18,6 +18,26 @@ const Header = ({ setModal }) => {
   return (
     <div className={styles.header}>
       {isLogIn && <Search />}
+      <div className={styles.headerLeft}>
+        <div className={styles.user}>
+          {nickname}
+          {nickname && <img src={user} alt="user logo" />}
+        </div>
+
+        {!isLogIn ? (
+          <button onClick={() => setModal(true)}>Вхід</button>
+        ) : (
+          <button
+            onClick={() => {
+              localStorage.removeItem("nickname");
+              dispatch(logOut());
+            }}
+          >
+            Вихід
+            <img src={upArrow} alt="arrow" />
+          </button>
+        )}
+      </div>
       {location.pathname !== "/" && isLogIn && (
         <Link to="/">
           <p>Повернутися до списку гравців</p>
@@ -41,7 +61,7 @@ const Header = ({ setModal }) => {
           <p>Особистий кабінет</p>
         )}
       </Link>
-      <div className={styles.headerLeft}>
+      {/* <div className={styles.headerLeft}>
         <div className={styles.user}>
           {nickname}
           {nickname && <img src={user} alt="user logo" />}
@@ -60,7 +80,7 @@ const Header = ({ setModal }) => {
             <img src={upArrow} alt="arrow" />
           </button>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };
