@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { search } from "../../store/redusers/search";
 import { Link, useLocation } from "react-router-dom";
 
+import styles from './Search.module.scss'
+
 const Search = () => {
   const [value, setValue] = useState("");
 
@@ -27,7 +29,7 @@ const Search = () => {
   return (
     <div>
       <Link to="/search">
-        <input value={value} onChange={handleChange} />
+        <input className={styles.search} value={value} onChange={handleChange} />
       </Link>
     </div>
   );

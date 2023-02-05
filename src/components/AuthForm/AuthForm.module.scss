@@ -1,8 +1,8 @@
 .box {
   width: 519px;
   height: 468px;
-  background-color: #FFFFFF;
-//   background-color: #e9f4d9;
+  background-color: #ffffff;
+  //   background-color: #e9f4d9;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -33,7 +33,7 @@
     padding-left: 5px;
   }
   @media screen and (max-width: 500px) {
-    width: 375px;
+    width: 365px;
   }
 }
 
@@ -69,7 +69,8 @@
   color: #181818;
 
   @media screen and (max-width: 500px) {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 26px;
+    width: 340px;
   }
 }
