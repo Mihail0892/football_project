@@ -1,6 +1,6 @@
 .main {
-  // position: absolute;
-  // position: relative;
+  position: relative;
+  z-index: 20;
 
   background-image: url(../../assets/field.jpg);
   width: 100vw;

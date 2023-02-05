@@ -1,18 +1,20 @@
-.main{
-    background-image: url(../../assets/field.jpg);
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.main {
+  position: relative;
+  z-index: 20;
+  background-image: url(../../assets/field.jpg);
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.list{
-    padding-top: 70px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 15px;
+.list {
+  padding-top: 70px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
 }
