@@ -19,13 +19,7 @@ const Header = ({ setModal }) => {
     <div className={styles.main}>
       <div className={styles.header}>
         {isLogIn && <Search />}
-        <div className={styles.headerLeft}>
-          <div className={styles.user}>
-            {nickname}
-            {nickname && <img src={user} alt="user logo" />}
-          </div>
-
-          {!isLogIn ? (
+        {!isLogIn ? (
             <button onClick={() => setModal(true)}>Вхід</button>
           ) : (
             <button
@@ -38,6 +32,13 @@ const Header = ({ setModal }) => {
               <img src={upArrow} alt="arrow" />
             </button>
           )}
+        <div className={styles.headerLeft}>
+          <div className={styles.user}>
+            {nickname}
+            {nickname && <img src={user} alt="user logo" />}
+          </div>
+
+          
         </div>
         {location.pathname !== "/" && isLogIn && (
           <Link to="/">
