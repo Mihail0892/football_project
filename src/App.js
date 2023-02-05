@@ -6,8 +6,8 @@ import { Route, Routes } from "react-router-dom";
 import { useSelector } from "react-redux";
 import MyFavorite from "./components/MyFavorite/MyFavorite";
 import GoldenBallList from "./components/GoldenBallList/GoldenBallList";
-import AuthForm from "./components/AuthForm/AuthForm";
 import styles from "./App.module.scss";
+import HomeComponent from "./components/HomeComponent/HomeComponent";
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -16,8 +16,7 @@ function App() {
   return (
     <div className={styles.box}>
       <Header setModal={setModal} />
-
-      {modal && <AuthForm setModal={setModal} />}
+      {modal &&<HomeComponent setModal={setModal}/>}
       {isLogIn && (
         <>
           <Routes>
