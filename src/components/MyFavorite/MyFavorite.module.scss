@@ -1,24 +1,21 @@
-.list{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 15px;
-    
+.main {
+  // position: absolute;
+  // position: relative;
+
+  background-image: url(../../assets/field.jpg);
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.listPage{
-    // position: absolute;
-    // position: relative;
-    top: 60px;
-    background-image: url(../../assets/field.jpg);
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position:center;
-    background-size: cover;
-    h1{
-        color: rgb(245, 148, 12);
-    }
+.list {
+  padding-top: 70px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
 }

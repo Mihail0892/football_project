@@ -1,11 +1,4 @@
-.list{
-    // position: absolute;
-    // position:relative;
-    top:70px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 10px;
+.main{
     background-image: url(../../assets/field.jpg);
     width: 100vw;
     height: 100vh;
@@ -14,4 +7,15 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.list{
+    // position: absolute;
+    // position:relative;
+    padding-top:70px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    
 }

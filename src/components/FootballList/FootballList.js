@@ -13,22 +13,24 @@ const FootballList = () => {
   }, [dispatch, players]);
 
   return (
-    <div className={styles.list}>
-      {players.map((item) => (
-        <FootballCard
-          key={item.id}
-          idfoot={item.id}
-          name={item.name}
-          country={item.country}
-          club={item.club}
-          goldenBall={item.goldenBall}
-          img={item.img}
-          likes={item.likes}
-          balls={item.quantityOfBalls}
-          imgClub={item.imgClub}
-          imgCountry={item.imgCountry}
-        />
-      ))}
+    <div className={styles.main}>
+      <div className={styles.list}>
+        {players.map((item) => (
+          <FootballCard
+            key={item.id}
+            idfoot={item.id}
+            name={item.name}
+            country={item.country}
+            club={item.club}
+            goldenBall={item.goldenBall}
+            img={item.img}
+            likes={item.likes}
+            balls={item.quantityOfBalls}
+            imgClub={item.imgClub}
+            imgCountry={item.imgCountry}
+          />
+        ))}
+      </div>
     </div>
   );
 };

@@ -7,8 +7,7 @@ const MyFavorite = () => {
   const favouritePlayers = useSelector((state) => state.Search.favourite);
   return (
     <>
-    <div className={styles.listPage}>
-      <h1>Список улюблених гравців</h1>
+    <div className={styles.main}>
       <div className={styles.list}>
         {favouritePlayers.map((item) => (
           <FootballCard

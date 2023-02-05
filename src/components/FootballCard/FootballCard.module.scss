@@ -9,16 +9,16 @@
   position: absolute;
   right: 10px;
   top: 30px;
-//   width: 150px;
-//   height: 200px;
   img {
     width: 180px;
     height: 220px;
-  }
-  &:hover {
-    transform: scale(1.1);
     transition: 0.5s;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
   }
+ 
 }
 
 .name {
