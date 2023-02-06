@@ -11,7 +11,7 @@
   margin-right: auto;
   width: 100vw;
   padding: 0 60px 0 60px;
-  // max-width: 1440px;
+  opacity: 0.9;
   height: 60px;
   background-color: rgb(234, 248, 223);
   display: flex;
@@ -25,6 +25,7 @@
     text-decoration: none;
     color: black;
     cursor: pointer;
+    transition: 0.5s;
     &:hover {
       transform: scale(1.1);
       transition: 0.5s;
@@ -43,6 +44,14 @@
     text-align: center;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    border-radius: 10px;
+    transition: 0.5s;
+    &:hover{
+      cursor: pointer;
+      transform: scale(0.9);
+      transition: 0.5s;
+      background-color: #eb9c00;
+    }
 
     @media screen and (max-width: 500px) {
       width: 80px;
@@ -85,11 +94,10 @@
   width: 100vw;
   height: 100vh;
   background-color: rgb(244, 249, 249);
-  transition:all 2s;
  
   a {
     text-decoration: none;
-    color: black;
+    color:#eb9c00;
     font-size: 36px;
     line-height: 42px;
     text-align: center;

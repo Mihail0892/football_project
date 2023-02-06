@@ -42,7 +42,7 @@ const Header = ({ setModal }) => {
 
           <Link onClick={() => setBurger(false)} to="/favorite">
             {isLogIn && location.pathname !== "/favorite" && (
-              <p>Особистий кабінет</p>
+              <p>Улюблені гравці</p>
             )}
           </Link>
           </div>
@@ -76,7 +76,7 @@ const Header = ({ setModal }) => {
         )}
         <Link to="/favorite">
           {isLogIn && location.pathname !== "/favorite" && (
-            <p>Особистий кабінет</p>
+            <p>Улюблені гравці</p>
           )}
         </Link>
         <div className={styles.headerLeft}>

@@ -29,7 +29,7 @@ const Search = () => {
   return (
     <div>
       <Link to="/search">
-        <input className={styles.search} value={value} onChange={handleChange} />
+        <input placeholder="Пошук гравця..." className={styles.search} value={value} onChange={handleChange} />
       </Link>
     </div>
   );

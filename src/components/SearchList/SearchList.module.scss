@@ -18,3 +18,21 @@
   flex-wrap: wrap;
   gap: 15px;
 }
+
+.notFound{
+  margin-top: 60px;
+  position: fixed;
+  z-index: 20;
+  background-image: url(../../assets/c4e81ea7649046ec06aca87059c630d0.jpg);
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  h1{
+    font-size: 52px;
+    line-height: 60px;
+  }
+}

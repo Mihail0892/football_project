@@ -42,7 +42,7 @@ const AuthForm = ({ setModal }) => {
       <div className={styles.modalText}>ДОЛУЧАЙСЯ ДО ГОЛОСУВАННЯ ЗА КРАЩОГО ФУТБОЛІСТА</div>
       <form onSubmit={handleSubmit}>
       <div className={styles.enteredPlace}>
-        <span onClick={() => setModal(false)}>X</span>
+        <span className={styles.closeModal} onClick={() => setModal(false)}>X</span>
         <input
           type="text"
           value={name}

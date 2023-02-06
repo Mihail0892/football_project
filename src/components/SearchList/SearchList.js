@@ -13,10 +13,15 @@ const SearchList = () => {
   useEffect(() => {
     dispatch(sortSearch());
   }, [dispatch, players]);
-  if (searchPlayers.length === 0) return "Гравця не знайдено";
-  else
-    return (
-      <>
+  // if (searchPlayers.length === 0) return "Гравця не знайдено";
+  // else
+  return (
+    <>
+      {searchPlayers.length === 0 ? (
+        <div className={styles.notFound}>
+          <h1>Ти якусь хєрню пишеш</h1>
+          </div>
+      ) : (
         <div className={styles.main}>
           <div className={styles.list}>
             {searchPlayers.map((item) => (
@@ -36,8 +41,9 @@ const SearchList = () => {
             ))}
           </div>
         </div>
-      </>
-    );
+      )}
+    </>
+  );
 };
 
 export default SearchList;

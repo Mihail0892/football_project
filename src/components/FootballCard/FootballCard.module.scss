@@ -18,77 +18,87 @@
       transition: 0.5s;
     }
   }
- 
 }
 
 .name {
-    width: 300px;
+  width: 300px;
   position: absolute;
   top: 276px;
-  font-family: 'Oswald';
-font-style: normal;
-font-weight: 500;
-font-size: 21px;
-line-height: 30px;
-text-align: center;
-letter-spacing: 0.05em;
-text-transform: uppercase;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 
-color: #181818;
+  color: #181818;
 }
 
 .likes {
-    width: 100px;
-    height: 27px;
+  width: 100px;
+  height: 27px;
   position: absolute;
   display: flex;
   justify-content: space-between;
   top: 353px;
   left: 117px;
-    img{
-        margin: 0 5px;
+  img {
+    margin: 0 5px;
+    transition: 0.5s;
+    &:hover{
+      transform: scale(1.2);
+      transition: 0.5s;
     }
+  }
 }
 
 .lable {
   position: absolute;
   top: 80px;
-  left:10px;
+  left: 10px;
   width: 70px;
   height: 90px;
 }
 
-.club{
-    position: absolute;
-    top: 30px;
-    left: 55px;
-    font-family: 'Oswald';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 20px;
-text-align: center;
-letter-spacing: 0.05em;
-text-transform: uppercase;
+.club {
+  position: absolute;
+  top: 30px;
+  left: 55px;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-.country{
-    position: absolute;
-    top: 50px;
-    left: 55px;
-    font-family: 'Oswald';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 20px;
-text-align: center;
-letter-spacing: 0.05em;
-text-transform: uppercase;
+.country {
+  position: absolute;
+  top: 50px;
+  left: 55px;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-.line{
-    position: absolute;
-    top: 323px;
-    left: 30px;
-
+.line {
+  position: absolute;
+  top: 323px;
+  left: 30px;
 }
+
+// .delete{
+//   position:absolute;
+//   bottom:50px;
+//   left: 148px;
+//   cursor: pointer;
+// }

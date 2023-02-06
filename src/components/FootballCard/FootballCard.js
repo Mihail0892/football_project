@@ -58,7 +58,7 @@ const FootballCard = ({
         className={styles.box}
       >
         {location.pathname === "/favorite" && (
-          <div onClick={() => dispatch(removeFromFavourite(idfoot))}>X</div>
+          <img src={dislike} alt='delete' className={styles.delete} onClick={() => dispatch(removeFromFavourite(idfoot))}/>
         )}
         <div className={styles.photo}>
           <img src={img} alt="player"></img>

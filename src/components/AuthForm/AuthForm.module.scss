@@ -2,7 +2,6 @@
   width: 519px;
   height: 468px;
   background-color: #ffffff;
-  //   background-color: #e9f4d9;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -48,9 +47,14 @@
   button {
     width: 318px;
     height: 46px;
-
     background: #eb9c00;
     border-radius: 3px;
+    transition: 0.5s;
+    &:hover{
+      cursor: pointer;
+      transform: scale(0.95);
+      transition: 0.5s;
+    }
   }
 }
 
@@ -74,3 +78,12 @@
     width: 340px;
   }
 }
+
+// .closeModal{
+//   // position: absolute;
+//   top: 30px;
+//   left:15px;
+//   &:hover{
+//     cursor: pointer;
+//   }
+// }
