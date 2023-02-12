@@ -8,6 +8,8 @@ import { logOut } from "../../store/redusers/auth";
 
 import user from "../../assets/user.svg";
 import upArrow from "../../assets/upArrow.svg";
+import close from "../../assets/close.png";
+import menu from "../../assets/menu.png";
 
 const Header = ({ setModal }) => {
   const [burger, setBurger] = useState(false);
@@ -20,15 +22,59 @@ const Header = ({ setModal }) => {
     <div className={styles.main}>
       {burger && (
         <div className={styles.burgerHeader}>
-          <h1 onClick={() => setBurger(false)}>X</h1>
+          <img
+            className={styles.closeIcon}
+            src={close}
+            alt="close"
+            onClick={() => setBurger(false)}
+          />
           <div className={styles.links}>
-          {location.pathname !== "/" && isLogIn && (
-            <Link onClick={() => setBurger(false)} to="/">
-              <p>Повернутися до списку гравців</p>
+            {location.pathname !== "/" && isLogIn && (
+              <Link onClick={() => setBurger(false)} to="/">
+                <p>Повернутися до списку гравців</p>
+              </Link>
+            )}
+            {(location.pathname === "/" || location.pathname === "/favorite") &&
+              isLogIn && (
+                <Link onClick={() => setBurger(false)} to="/goldenBall">
+                  <p
+                    onClick={() => {
+                      dispatch(showGolderBall());
+                      dispatch(sortBall());
+                    }}
+                  >
+                    Володарі Золотого м'яча
+                  </p>
+                </Link>
+              )}
+
+            <Link onClick={() => setBurger(false)} to="/favorite">
+              {isLogIn && location.pathname !== "/favorite" && (
+                <p>Улюблені гравці</p>
+              )}
             </Link>
-          )}
-          {(location.pathname === "/"||location.pathname === "/favorite") && isLogIn && (
-            <Link onClick={() => setBurger(false)} to="/goldenBall">
+          </div>
+        </div>
+      )}
+      {/* Обычное меню */}
+      <div className={styles.header}>
+        {isLogIn && (
+          <img
+            onClick={() => setBurger(true)}
+            className={styles.burgerImage}
+            src={menu}
+            alt="burger"
+          />
+        )}
+        {isLogIn && <Search />}
+        {location.pathname !== "/" && isLogIn && (
+          <Link to="/">
+            <p>Повернутися до списку гравців</p>
+          </Link>
+        )}
+        {(location.pathname === "/" || location.pathname === "/favorite") &&
+          isLogIn && (
+            <Link to="/goldenBall">
               <p
                 onClick={() => {
                   dispatch(showGolderBall());
@@ -39,41 +85,6 @@ const Header = ({ setModal }) => {
               </p>
             </Link>
           )}
-
-          <Link onClick={() => setBurger(false)} to="/favorite">
-            {isLogIn && location.pathname !== "/favorite" && (
-              <p>Улюблені гравці</p>
-            )}
-          </Link>
-          </div>
-        </div>
-      )}
-      {/* Обычное меню */}
-      <div className={styles.header}>
-      {isLogIn &&<img
-        onClick={() => setBurger(true)}
-        className={styles.burgerImage}
-        src={user}
-        alt="burger"
-      />}
-        {isLogIn && <Search />}
-        {location.pathname !== "/" && isLogIn && (
-          <Link to="/">
-            <p>Повернутися до списку гравців</p>
-          </Link>
-        )}
-        {(location.pathname === "/"||location.pathname === "/favorite") && isLogIn && (
-          <Link to="/goldenBall">
-            <p
-              onClick={() => {
-                dispatch(showGolderBall());
-                dispatch(sortBall());
-              }}
-            >
-              Володарі Золотого м'яча
-            </p>
-          </Link>
-        )}
         <Link to="/favorite">
           {isLogIn && location.pathname !== "/favorite" && (
             <p>Улюблені гравці</p>
@@ -91,6 +102,7 @@ const Header = ({ setModal }) => {
             <button
               onClick={() => {
                 localStorage.removeItem("nickname");
+                localStorage.clear();
                 dispatch(logOut());
               }}
             >

@@ -10,7 +10,7 @@ import HomeComponent from "./components/HomeComponent/HomeComponent";
 import Header from "./components/Header/Header";
 
 function App() {
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState(true);
   const isLogIn = useSelector((state) => state.Auth.isLogedIn);
 
   return (

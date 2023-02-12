@@ -12,6 +12,8 @@ import styles from "./FootballCard.module.scss";
 import like from "../../assets/like.svg";
 import dislike from "../../assets/dislike.svg";
 import line from "../../assets/line.png";
+import golden from "../../assets/golden.svg";
+import deleteIcon from "../../assets/deleteIcon.svg";
 
 const FootballCard = ({
   name,
@@ -25,6 +27,7 @@ const FootballCard = ({
   imgClub,
   imgCountry,
 }) => {
+  // window.matchMedia();
   const [showLable, setShowLable] = useState(false);
   const dispatch = useDispatch();
   const location = useLocation();
@@ -58,19 +61,28 @@ const FootballCard = ({
         className={styles.box}
       >
         {location.pathname === "/favorite" && (
-          <img src={dislike} alt='delete' className={styles.delete} onClick={() => dispatch(removeFromFavourite(idfoot))}/>
+          <div className={styles.delete}>
+            <img
+              src={deleteIcon}
+              alt="delete"
+              onClick={() => dispatch(removeFromFavourite(idfoot))}
+            />
+          </div>
         )}
         <div className={styles.photo}>
           <img src={img} alt="player"></img>
         </div>
         <div className={styles.name}>{name}</div>
-        <img className={styles.line} src={line} alt="line"/>
+        <img className={styles.line} src={line} alt="line" />
         <div className={styles.club}>{club}</div>
         <div className={styles.country}>{country}</div>
         <div className={styles.position}>{goldenBall}</div>
 
         {showLable && (
-          <img className={styles.lable} src={imgClub} alt="img"></img>
+          <>
+            <img className={styles.lable} src={imgClub} alt="img" />
+            <img className={styles.flag} src={imgCountry} alt="img" />
+          </>
         )}
 
         <div className={styles.likes}>
@@ -82,7 +94,18 @@ const FootballCard = ({
                 <img src={like} alt="dislike" onClick={handleDecClick}></img>
               </div>
             )}
-          {location.pathname === "/goldenBall" && <>{balls}</>}
+        </div>
+        <div className={styles.balls}>
+          {location.pathname === "/goldenBall" && (
+            <>
+              {balls}
+              <img
+                className={styles.golden}
+                src={golden}
+                alt="golden ball"
+              ></img>
+            </>
+          )}
         </div>
       </div>
     </>

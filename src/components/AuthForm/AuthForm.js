@@ -39,34 +39,35 @@ const AuthForm = ({ setModal }) => {
 
   return (
     <div ref={divEl} className={styles.box}>
-      <div className={styles.modalText}>ДОЛУЧАЙСЯ ДО ГОЛОСУВАННЯ ЗА КРАЩОГО ФУТБОЛІСТА</div>
+      <div className={styles.modalText}>
+        ДОЛУЧАЙСЯ ДО ГОЛОСУВАННЯ ЗА КРАЩОГО ФУТБОЛІСТА
+      </div>
       <form onSubmit={handleSubmit}>
-      <div className={styles.enteredPlace}>
-        <span className={styles.closeModal} onClick={() => setModal(false)}>X</span>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Ваше ім'я*"
-          minLength={3}
-        />
-        
-        <input
-          type="text"
-          value={pass}
-          onChange={(e) => setPass(e.target.value)}
-          placeholder="Хто путін?*"
-        />
-        <button
-          onClick={() => {
-            pass.toLowerCase() === "хуйло" && dispatch(logIn());
-            pass.toLowerCase() === "хуйло" && dispatch(changeNickname(name));
-          }}
-          disabled={name === "" ? true : false}
-          type="submit"
-        >
-          Вхід
-        </button>
+        <div className={styles.enteredPlace}>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Ваше ім'я*"
+            minLength={3}
+          />
+
+          <input
+            type="text"
+            value={pass}
+            onChange={(e) => setPass(e.target.value)}
+            placeholder="Хто путін?*"
+          />
+          <button
+            onClick={() => {
+              pass.toLowerCase() === "хуйло" && dispatch(logIn());
+              pass.toLowerCase() === "хуйло" && dispatch(changeNickname(name));
+            }}
+            disabled={name === "" ? true : false}
+            type="submit"
+          >
+            Вхід
+          </button>
         </div>
       </form>
     </div>

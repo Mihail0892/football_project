@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { search } from "../../store/redusers/search";
 import { Link, useLocation } from "react-router-dom";
 
-import styles from './Search.module.scss'
+import styles from "./Search.module.scss";
 
 const Search = () => {
   const [value, setValue] = useState("");
@@ -29,7 +29,12 @@ const Search = () => {
   return (
     <div>
       <Link to="/search">
-        <input placeholder="Пошук гравця..." className={styles.search} value={value} onChange={handleChange} />
+        <input
+          placeholder="Пошук гравця..."
+          className={styles.search}
+          value={value}
+          onChange={handleChange}
+        />
       </Link>
     </div>
   );

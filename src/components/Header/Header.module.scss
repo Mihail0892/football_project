@@ -1,7 +1,14 @@
+@font-face {
+  font-family: "OswaldMedium";
+  src: url(../../fonts/Oswald-Medium.ttf);
+}
+
+@font-face {
+  font-family: "OswaldRegular";
+  src: url(../../fonts/Oswald-Regular.ttf);
+}
+
 .main {
-  // box-sizing: border-box;
-  // width: 100vw;
-  // max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -13,7 +20,7 @@
   padding: 0 60px 0 60px;
   opacity: 0.9;
   height: 60px;
-  background-color: rgb(234, 248, 223);
+  background-color: rgb(182, 244, 182);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,17 +43,20 @@
   button {
     width: 115px;
     height: 51px;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     font-style: normal;
+    font-family: "OswaldMedium";
     font-weight: 500;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 21px;
     text-align: center;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     border-radius: 10px;
     transition: 0.5s;
-    &:hover{
+    &:hover {
       cursor: pointer;
       transform: scale(0.9);
       transition: 0.5s;
@@ -58,16 +68,23 @@
       height: 30px;
       font-weight: 300;
       font-size: 12px;
-      line-height: 14px;
     }
   }
-  @media screen and (max-width: 992px) {
+
+  @media screen and (max-width: 1024px) {
     padding: 0 10px 0 10px;
   }
 
-  p,
+  a:has(p),
   .user {
-    @media screen and (max-width: 500px) {
+    font-family: "OswaldMedium";
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #181818;
+
+    @media screen and (max-width: 900px) {
       display: none;
     }
   }
@@ -78,11 +95,11 @@
   width: 150px;
   img {
     margin-left: 5px;
+    transform: translateY(3px);
   }
 }
 
 .headerLeft {
-  // width: 230px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -93,30 +110,47 @@
   z-index: 100;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(244, 249, 249);
- 
+  background-color: rgb(182, 244, 182);
+  background-image: url(../../assets/burgerFon2.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   a {
     text-decoration: none;
-    color:#eb9c00;
+    color: #d9e6f5;
+    font-family: "OswaldMedium";
     font-size: 36px;
     line-height: 42px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     text-align: center;
     margin-bottom: 50px;
   }
 }
 
 .burgerImage {
+  width: 35px;
+  height: 35px;
   display: none;
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 900px) {
     display: block;
   }
 }
 
-.links{
+.links {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+}
+
+.closeIcon {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
 }

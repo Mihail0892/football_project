@@ -1,18 +1,83 @@
-import Ronaldo from './../assets/ronaldo.png';
-import Ibra from './../assets/ibra.png';
+import CrRonaldo from './../assets/cristiano.png';
 import Messi from './../assets/messi.png';
+import Ibra from './../assets/ibra.png';
 import Neymar from './../assets/neymar.png';
+import Kaka from './../assets/kaka.png';
+import Benzema from './../assets/benzema.png';
+import Modric from './../assets/modric.png';
+import Sheva from './../assets/sheva.png';
+import Puyol from './../assets/puyol.png';
+import Ronaldo from './../assets/ronaldo.png';
+import Xavi from './../assets/xavi.png';
+import Iniesta from './../assets/iniesta.png';
+import Zidan from './../assets/zidan.png';
+import Cannavaro from './../assets/cannavaro.png';
+import Figo from './../assets/figo.png';
+import Owen from './../assets/owen.png';
+import Nedved from './../assets/nedved.png';
+import Henry from './../assets/henry.png';
+import Giggs from './../assets/gigs.png';
+import Raul from './../assets/raul.png';
+import Ramos from './../assets/ramos.png';
+import Suarez from './../assets/suarez.png';
+import Totti from './../assets/totti.png';
+import Bekhem from './../assets/bekhem.png';
+import Carlos from './../assets/carlos.png';
+import Casillas from './../assets/casillas.png';
+import Ronaldinho from './../assets/ronaldinio.png';
+import Gerrard from './../assets/gerrard.png';
+import Ferdinand from './../assets/ferdinand.png';
+import Lewandowski from './../assets/lewandowski.png';
+import Aguero from './../assets/aguero.png';
+import Terry from './../assets/terry.png';
+import Lampard from './../assets/lampard.png';
+import Ribery from './../assets/ribery.png';
+import Alonso from './../assets/alonso.png';
+import Torres from './../assets/torres.png';
+import DeBruyne from './../assets/debruyne.png';
+import Mbappe from './../assets/mbappe.png';
+import Haaland from './../assets/haaland.png';
+import Buffon from './../assets/buffon.png';
 
-import real from './../assets/real.jpg';
+import Arsenal from './../assets/Arsenal.svg';
+import Atletico from './../assets/Atletico.svg';
+import Barcelona from './../assets/Barcelona.svg';
+import Bayern from './../assets/Bayern.svg';
+import Chelsea from './../assets/Chelsea.svg';
+import Juventus from './../assets/Juventus.svg';
+import Liverpool from './../assets/Liverpool.svg';
+import ManCity from './../assets/ManCity.svg';
+import ManUnited from './../assets/ManUnited.svg';
+import Milan from './../assets/Milan.svg';
+import PSG from './../assets/PSG.svg';
+import Real from './../assets/Real.svg';
+import Roma from './../assets/Roma.svg';
+
+import Spain from './../assets/Spain.svg';
+import Argentina from './../assets/Argentina.svg';
+import Brazil from './../assets/Brazil.svg';
+import Belgium from './../assets/Belgium.svg';
+import Croatia from './../assets/Croatia.svg';
+import Czech from './../assets/Czech_Republic.svg';
+import England from './../assets/England.svg';
+import France from './../assets/France.svg';
+import Italy from './../assets/Italy.svg';
+import Norway from './../assets/Norway.svg';
+import Poland from './../assets/Poland.svg';
+import Portugal from './../assets/Portugal.svg';
+import Sweden from './../assets/Sweden.svg';
+import Ukraine from './../assets/Ukraine.svg';
+import Uruguay from './../assets/Uruguay.svg';
+import Wales from './../assets/Wales.svg';
 
 
 const Data = [
   {
     id: 1,
     name: "Cristiano Ronaldo",
-    img: Ronaldo,
-    imgClub: real,
-    imgCountry: null ,
+    img: CrRonaldo,
+    imgClub: Real,
+    imgCountry: Portugal ,
     club: "Real Madrid",
     country: "Portugal",
     goldenBall: true,
@@ -23,8 +88,8 @@ const Data = [
     id: 2,
     name: "Lionel Messi",
     img: Messi,
-    imgClub: real,
-    imgCountry: null ,
+    imgClub: Barcelona,
+    imgCountry: Argentina ,
     club: "Barcelona",
     country: "Argentina",
     goldenBall: true,
@@ -35,8 +100,8 @@ const Data = [
     id: 3,
     name: "zlatan ibrahimović",
     img: Ibra,
-    imgClub: real,
-    imgCountry: null ,
+    imgClub: Milan,
+    imgCountry: Sweden ,
     club: "Milan",
     country: "Sweden",
     goldenBall: false,
@@ -47,8 +112,8 @@ const Data = [
     id: 4,
     name: "Neymar Jr.",
     img: Neymar,
-    imgClub: real,
-    imgCountry: null ,
+    imgClub: PSG,
+    imgCountry: Brazil ,
     club: "PSG",
     country: "Brasil",
     goldenBall: false,
@@ -57,22 +122,22 @@ const Data = [
   },
   {
     id: 5,
-    name: "Кака́",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    name: "KAKA",
+    img: Kaka,
+    imgClub: Milan,
+    imgCountry: Brazil ,
     club: "Milan",
     country: "Brasil",
-    goldenBall: false,
-    quantityOfBalls:0,
+    goldenBall: true,
+    quantityOfBalls:1,
     likes: 0,
   },
   {
     id: 6,
     name: "karim benzema",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Benzema,
+    imgClub: Real,
+    imgCountry: France ,
     club: "Real Madrid",
     country: "france",
     goldenBall: true,
@@ -82,9 +147,9 @@ const Data = [
   {
     id: 7,
     name: "luka modrić",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Modric,
+    imgClub: Real,
+    imgCountry: Croatia ,
     club: "Real Madrid",
     country: "croatia",
     goldenBall: true,
@@ -94,9 +159,9 @@ const Data = [
   {
     id: 8,
     name: "andriy shevchenko",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Sheva,
+    imgClub: Milan,
+    imgCountry: Ukraine ,
     club: "Milan",
     country: "ukraine",
     goldenBall: true,
@@ -106,9 +171,9 @@ const Data = [
   {
     id: 9,
     name: "ronaldinho",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Ronaldinho,
+    imgClub: Barcelona,
+    imgCountry: Brazil ,
     club: "Barcelona",
     country: "Brasil",
     goldenBall: true,
@@ -118,9 +183,9 @@ const Data = [
   {
     id: 10,
     name: "ronaldo",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Ronaldo,
+    imgClub: Real,
+    imgCountry: Brazil ,
     club: "Real Madrid",
     country: "Brasil",
     goldenBall: true,
@@ -130,9 +195,9 @@ const Data = [
   {
     id: 11,
     name: "Xavier Hernández",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Xavi,
+    imgClub: Barcelona,
+    imgCountry: Spain ,
     club: "Barcelona",
     country: "Spain",
     goldenBall: false,
@@ -142,9 +207,9 @@ const Data = [
   {
     id: 12,
     name: "andres iniesta",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Iniesta,
+    imgClub: Barcelona,
+    imgCountry: Spain ,
     club: "Barcelona",
     country: "Spain",
     goldenBall: false,
@@ -154,9 +219,9 @@ const Data = [
   {
     id: 13,
     name: "zinedine zidane",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Zidan,
+    imgClub: Real,
+    imgCountry: France ,
     club: "Real Madrid",
     country: "France",
     goldenBall: true,
@@ -166,9 +231,9 @@ const Data = [
   {
     id: 14,
     name: "fabio cannavaro",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Cannavaro,
+    imgClub: Real,
+    imgCountry: Italy ,
     club: "Real Madrid",
     country: "Italy",
     goldenBall: true,
@@ -178,9 +243,9 @@ const Data = [
   {
     id: 15,
     name: "luis figo",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Figo,
+    imgClub: Real,
+    imgCountry: Portugal ,
     club: "Real Madrid",
     country: "Portugal",
     goldenBall: true,
@@ -190,9 +255,9 @@ const Data = [
   {
     id: 16,
     name: "michael owen",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Owen,
+    imgClub: Liverpool,
+    imgCountry: England ,
     club: "Liverpool",
     country: "england",
     goldenBall: true,
@@ -202,9 +267,9 @@ const Data = [
   {
     id: 17,
     name: "pavel nedved",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Nedved,
+    imgClub: Juventus,
+    imgCountry: Czech ,
     club: "juventus",
     country: "Czech",
     goldenBall: true,
@@ -214,9 +279,9 @@ const Data = [
   {
     id: 18,
     name: "thierry henry",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Henry,
+    imgClub: Arsenal,
+    imgCountry: France ,
     club: "Arsenal",
     country: "France",
     goldenBall: false,
@@ -226,10 +291,10 @@ const Data = [
   {
     id: 19,
     name: "ryan giggs",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
-    club: "manchester united",
+    img: Giggs,
+    imgClub: ManUnited,
+    imgCountry: Wales ,
+    club: "man united",
     country: "wales",
     goldenBall: false,
     quantityOfBalls:0,
@@ -238,9 +303,9 @@ const Data = [
   {
     id: 20,
     name: "raul gonzalez",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Raul,
+    imgClub: Real,
+    imgCountry: Spain ,
     club: "Real Madrid",
     country: "spain",
     goldenBall: false,
@@ -250,9 +315,9 @@ const Data = [
   {
     id: 21,
     name: "sergio ramos",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Ramos,
+    imgClub: Real,
+    imgCountry: Spain ,
     club: "Real Madrid",
     country: "spain",
     goldenBall: false,
@@ -262,9 +327,9 @@ const Data = [
   {
     id: 22,
     name: "luis suárez",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Suarez,
+    imgClub: Barcelona,
+    imgCountry: Uruguay ,
     club: "Barcelona",
     country: "uruguay",
     goldenBall: false,
@@ -274,9 +339,9 @@ const Data = [
   {
     id: 23,
     name: "francesco totti",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Totti,
+    imgClub: Roma,
+    imgCountry: Italy ,
     club: "Roma",
     country: "Italy",
     goldenBall: false,
@@ -286,10 +351,10 @@ const Data = [
   {
     id: 24,
     name: "david beckham",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
-    club: "manchester united",
+    img: Bekhem,
+    imgClub: ManUnited,
+    imgCountry: England ,
+    club: "man united",
     country: "England",
     goldenBall: false,
     quantityOfBalls:0,
@@ -298,9 +363,9 @@ const Data = [
   {
     id: 25,
     name: "roberto carlos",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Carlos,
+    imgClub: Real,
+    imgCountry: Brazil ,
     club: "Real Madrid",
     country: "Brasil",
     goldenBall: false,
@@ -310,9 +375,9 @@ const Data = [
   {
     id: 26,
     name: "iker casillas",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Casillas,
+    imgClub: Real,
+    imgCountry: Spain ,
     club: "Real Madrid",
     country: "Spain",
     goldenBall: false,
@@ -322,9 +387,9 @@ const Data = [
   {
     id: 27,
     name: "carles puyol",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Puyol,
+    imgClub: Barcelona,
+    imgCountry: Spain ,
     club: "Barcelona",
     country: "Spain",
     goldenBall: false,
@@ -334,9 +399,9 @@ const Data = [
   {
     id: 28,
     name: "steven gerrard",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Gerrard,
+    imgClub: Liverpool,
+    imgCountry: England ,
     club: "Liverpool",
     country: "england",
     goldenBall: false,
@@ -346,10 +411,10 @@ const Data = [
   {
     id: 29,
     name: "rio ferdinand",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
-    club: "manchester united",
+    img: Ferdinand,
+    imgClub: ManUnited,
+    imgCountry: England ,
+    club: "man united",
     country: "England",
     goldenBall: false,
     quantityOfBalls:0,
@@ -358,10 +423,10 @@ const Data = [
   {
     id: 30,
     name: "robert lewandowski",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
-    club: "Bavaria",
+    img: Lewandowski,
+    imgClub: Bayern,
+    imgCountry: Poland ,
+    club: "Bayern",
     country: "Poland",
     goldenBall: false,
     quantityOfBalls:0,
@@ -370,10 +435,10 @@ const Data = [
   {
     id: 31,
     name: "sergio aguero",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
-    club: "manchester city",
+    img: Aguero,
+    imgClub: ManCity,
+    imgCountry: Argentina ,
+    club: "man city",
     country: "Argentina",
     goldenBall: false,
     quantityOfBalls:0,
@@ -382,9 +447,9 @@ const Data = [
   {
     id: 32,
     name: "john terry",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Terry,
+    imgClub: Chelsea,
+    imgCountry: England ,
     club: "chelsea",
     country: "England",
     goldenBall: false,
@@ -394,9 +459,9 @@ const Data = [
   {
     id: 33,
     name: "frank lampard",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Lampard,
+    imgClub: Chelsea,
+    imgCountry: England ,
     club: "chelsea",
     country: "England",
     goldenBall: false,
@@ -406,10 +471,10 @@ const Data = [
   {
     id: 34,
     name: "franck ribery",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
-    club: "Bavaria",
+    img: Ribery,
+    imgClub: Bayern,
+    imgCountry: France ,
+    club: "Bayern",
     country: "France",
     goldenBall: false,
     quantityOfBalls:0,
@@ -418,9 +483,9 @@ const Data = [
   {
     id: 35,
     name: "xabi alonso",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Alonso,
+    imgClub: Real,
+    imgCountry: Spain ,
     club: "Real Madrid",
     country: "Spain",
     goldenBall: false,
@@ -430,9 +495,9 @@ const Data = [
   {
     id: 36,
     name: "fernando torres",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Torres,
+    imgClub: Atletico,
+    imgCountry: Spain ,
     club: "Atletico",
     country: "Spain",
     goldenBall: false,
@@ -442,10 +507,10 @@ const Data = [
   {
     id: 37,
     name: "kevin de bruyne",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
-    club: "manchester city",
+    img: DeBruyne,
+    imgClub: ManCity,
+    imgCountry: Belgium ,
+    club: "man city",
     country: "Belgium",
     goldenBall: false,
     quantityOfBalls:0,
@@ -454,9 +519,9 @@ const Data = [
   {
     id: 38,
     name: "kylian mbappé",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Mbappe,
+    imgClub: PSG,
+    imgCountry: France ,
     club: "PSG",
     country: "France",
     goldenBall: false,
@@ -466,10 +531,10 @@ const Data = [
   {
     id: 39,
     name: "erling haaland",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
-    club: "manchester city",
+    img: Haaland,
+    imgClub: ManCity,
+    imgCountry: Norway ,
+    club: "man city",
     country: "Norway",
     goldenBall: false,
     quantityOfBalls:0,
@@ -478,9 +543,9 @@ const Data = [
   {
     id: 40,
     name: "gianluigi buffon",
-    img: null,
-    imgClub: real,
-    imgCountry: null ,
+    img: Buffon,
+    imgClub: Juventus,
+    imgCountry: Italy ,
     club: "juventus",
     country: "Italy",
     goldenBall: false,

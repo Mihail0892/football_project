@@ -1,7 +1,7 @@
 .main {
   position: relative;
   z-index: 20;
-  background-image: url(../../assets/field.jpg);
+  background-image: url(../../assets/fon1.jpg);
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
@@ -19,11 +19,11 @@
   gap: 15px;
 }
 
-.notFound{
+.notFound {
   margin-top: 60px;
   position: fixed;
   z-index: 20;
-  background-image: url(../../assets/c4e81ea7649046ec06aca87059c630d0.jpg);
+  background-image: url(../../assets/arbitrDesc.jpg);
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
@@ -31,8 +31,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  h1{
-    font-size: 52px;
-    line-height: 60px;
+  @media screen and (max-width: 900px) {
+    background-image: url(../../assets/arbitrMob.jpg);
   }
 }

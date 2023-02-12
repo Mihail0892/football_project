@@ -32,7 +32,7 @@ const Search = createSlice({
       const findCount = state.players.find(
         (item) => item.id === action.payload
       );
-      if (findCount) {
+      if (findCount&&findCount.likes>=1) {
         --findCount.likes;
         localStorage.setItem("data", JSON.stringify(state.players));
       }

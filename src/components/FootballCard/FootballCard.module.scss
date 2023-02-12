@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "OswaldMedium";
+  src: url(../../fonts/Oswald-Medium.ttf);
+}
+
+@font-face {
+  font-family: "OswaldRegular";
+  src: url(../../fonts/Oswald-Regular.ttf);
+}
+
 .box {
   position: relative;
   width: 307px;
@@ -5,26 +15,11 @@
   background-image: url(../../assets/Card.png);
 }
 
-.photo {
-  position: absolute;
-  right: 10px;
-  top: 30px;
-  img {
-    width: 180px;
-    height: 220px;
-    transition: 0.5s;
-    &:hover {
-      transform: scale(1.1);
-      transition: 0.5s;
-    }
-  }
-}
-
 .name {
   width: 300px;
   position: absolute;
   top: 276px;
-  font-family: "Oswald";
+  font-family: "OswaldMedium";
   font-style: normal;
   font-weight: 500;
   font-size: 21px;
@@ -38,16 +33,23 @@
 
 .likes {
   width: 100px;
-  height: 27px;
   position: absolute;
   display: flex;
   justify-content: space-between;
   top: 353px;
   left: 117px;
+  font-family: "OswaldMedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.05em;
   img {
     margin: 0 5px;
     transition: 0.5s;
-    &:hover{
+    &:hover {
+      cursor: pointer;
       transform: scale(1.2);
       transition: 0.5s;
     }
@@ -57,16 +59,24 @@
 .lable {
   position: absolute;
   top: 80px;
-  left: 10px;
-  width: 70px;
-  height: 90px;
+  left: 15px;
+  width: 90px;
+  height: 70px;
+}
+
+.flag {
+  position: absolute;
+  top: 150px;
+  left: 15px;
+  width: 90px;
+  height: 70px;
 }
 
 .club {
   position: absolute;
   top: 30px;
   left: 55px;
-  font-family: "Oswald";
+  font-family: "OswaldMedium";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -80,7 +90,7 @@
   position: absolute;
   top: 50px;
   left: 55px;
-  font-family: "Oswald";
+  font-family: "OswaldMedium";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -96,9 +106,28 @@
   left: 30px;
 }
 
-// .delete{
-//   position:absolute;
-//   bottom:50px;
-//   left: 148px;
-//   cursor: pointer;
-// }
+.delete {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 50px;
+  left: 142px;
+  cursor: pointer;
+}
+
+.balls {
+  position: absolute;
+  top: 355px;
+  left: 140px;
+  font-family: "OswaldMedium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.golden {
+  transform: translateY(4px);
+}
